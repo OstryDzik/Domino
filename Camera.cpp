@@ -43,6 +43,7 @@ void Camera::handleMouseMoved(int button, int deltaX, int deltaY)
         if (rotY + deltaY * mouseSpeed > 0 && rotY + deltaY * mouseSpeed < 180)
         {
             rotY += (deltaY * mouseSpeed);
+
         }
     }
     else
