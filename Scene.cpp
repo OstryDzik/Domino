@@ -154,6 +154,10 @@ void Keyboard(unsigned char key, int x, int y)
     {
         dominoSet->loadYSet(75);
     }
+	else if (key == '3')
+	{
+		dominoSet->loadDiamondSet(80);
+	}
     glutPostRedisplay();
 }
 

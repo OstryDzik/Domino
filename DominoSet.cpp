@@ -54,6 +54,26 @@ void DominoSet::loadYSet(int count)
     calcAngles();
 }
 
+void DominoSet::loadDiamondSet(int count)
+{
+	this->clear();
+	double startPos = count / 4 * (defSizeZ + defDistance);
+	dominos.push_back(new Domino(0, 0, startPos - (-1)*(defSizeZ + (defDistance)), defSizeX, defSizeY, defSizeZ, 0));
+	for (int i = 1; i <= count / 4; i++)
+	{
+		dominos.push_back(new Domino(i*defSizeX / 2, 0, startPos-(i - 1)*(defSizeZ + (defDistance)), defSizeX, defSizeY, defSizeZ, 0));
+		dominos.push_back(new Domino(-i*defSizeX / 2, 0, startPos-(i - 1)*(defSizeZ + (defDistance)), defSizeX, defSizeY, defSizeZ, 0));
+	}
+	for (int i = 1; i <= count / 4; i++)
+	{
+		dominos.push_back(new Domino(((count/4)-i)*defSizeX / 2, 0,  - (i - 1)*(defSizeZ + (defDistance)), defSizeX, defSizeY, defSizeZ, 0));
+		dominos.push_back(new Domino(((-count/4)+i)*defSizeX / 2, 0,  - (i - 1)*(defSizeZ + (defDistance)), defSizeX, defSizeY, defSizeZ, 0));
+	}
+	started = false;
+	ready = true;
+	calcAngles();
+}
+
 void DominoSet::resetDominos()
 {
     if (dominos.size()!=0)

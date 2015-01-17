@@ -1,6 +1,6 @@
 #include "Camera.h"
 #include <math.h>
-
+#define MIN_DISTANCE 30
 
 Camera::Camera(float posX, float posY, float posZ, float rotX, float rotY, double floorLvl, double roomSizeX, double roomSizeZ)
 {
@@ -19,6 +19,7 @@ Camera::Camera(float posX, float posY, float posZ, float rotX, float rotY, doubl
     this->floorLvl = floorLvl;
     this->roomSizeX = roomSizeX;
     this->roomSizeZ = roomSizeZ;
+	initDistance = calcDistance(posX, posY, posZ);
 }
 
 
@@ -46,7 +47,10 @@ void Camera::handleMouseMoved(int button, int deltaX, int deltaY)
     }
     else
     {
-        posZ -= deltaY * mouseSpeed;
+		if (calcDistance(posX, posY, posZ - (deltaY*mouseSpeed)) <= initDistance && calcDistance(posX, posY, posZ - (deltaY*mouseSpeed)) > MIN_DISTANCE)
+		{
+			posZ -= deltaY * mouseSpeed;
+		}
     }
     calcLimits();
 }

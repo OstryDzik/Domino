@@ -25,6 +25,7 @@ public:
     void start();
     void loadDefaultSet(int count);
     void loadYSet(int count);
+	void loadDiamondSet(int count);
     void nextStep();
     void clear();
     void pause();

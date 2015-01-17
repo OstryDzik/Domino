@@ -16,6 +16,7 @@ private:
     float initPosZ;
     float initRotX;
     float initRotY;
+	float initDistance;
     float mouseSpeed;
     float moveSpeed;
     float distance;

@@ -7,7 +7,7 @@
 
 enum TexType
 {
-   NoTex = -1, OneDot, TwoDot, ThreeDot, FourDot, Wood, Wall,Floor
+   NoTex = -1, OneDot, TwoDot, ThreeDot, FourDot,DominoSide, Wood, Wall,Floor
 };
 
 class TextureManager

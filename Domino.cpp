@@ -10,6 +10,7 @@ Domino::Domino(double posX, double posY, double posZ, int sizeX, int sizeY, int 
     resting = false;
     this->setFrontTex((TexType)(rand() % 4 ));
     this->setBackTex((TexType)(rand() % 4 ));
+	this->setSideTex(TexType::DominoSide);
 }
 
 

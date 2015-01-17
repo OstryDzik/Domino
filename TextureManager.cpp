@@ -6,10 +6,11 @@ TextureManager* TextureManager::instance = NULL;
 
 TextureManager::TextureManager()
 {
-    textures.push_back(this->LoadTexture("OneTwo.bmp"));
-    textures.push_back(this->LoadTexture("TwoThree.bmp"));
-    textures.push_back(this->LoadTexture("ThreeFour.bmp"));
-    textures.push_back(this->LoadTexture("OneOne.bmp"));
+    textures.push_back(this->LoadTexture("One.bmp"));
+    textures.push_back(this->LoadTexture("Two.bmp"));
+    textures.push_back(this->LoadTexture("Three.bmp"));
+    textures.push_back(this->LoadTexture("Four.bmp"));
+	textures.push_back(this->LoadTexture("DominoSide.bmp"));
     textures.push_back(this->LoadTexture("Wood.bmp"));
     textures.push_back(this->LoadTexture("Wallpaper.bmp"));
     textures.push_back(this->LoadTexture("Floor.bmp"));
